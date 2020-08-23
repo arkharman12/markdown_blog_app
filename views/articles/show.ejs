@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <title>Blog App</title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1 class="mb-1"><%= article.title %></h1>
+        <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
+        <a href="/" class="mb-3 btn btn-secondary"><i class="fas fa-arrow-circle-left"></i> Back to all articles</a>
+        <!-- <a href="/articles/edit/<%= article.id %>" class="mb-2 btn btn-warning">Edit</a> -->
+
+        <div class="card">
+            <div class="card-body">
+                <%- article.sanitizedHtml %>
+            </div>
+            <div class="card-footer">
+                <a href="/articles/edit/<%= article.id %>" class="mt-2 btn btn-outline-warning">Edit</a>
+                <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+                    <button type="submit" class="mt-2 btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

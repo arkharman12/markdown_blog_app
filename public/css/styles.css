@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url("../images/background.jpg");
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+}
