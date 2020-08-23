@@ -1,4 +1,4 @@
-# Makrdown Blog App
+# Markdown Blog App
 Full-stack markdown blog application which runs on Node.js, Express, and MongoDB
 
 ## Usage
